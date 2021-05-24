@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Form , Button, Input, Modal } from 'antd';
-import { CheckOutlined } from '@ant-design/icons';
+import { CheckOutlined, LockOutlined } from '@ant-design/icons';
 
 import { addNewRow } from '../redux/actions';
 
@@ -24,8 +24,9 @@ const AddNewRow = ({ isVisible , setIsVisible }) => {
             >
 
                 <Form key={clearForm} dir="rtl" id="newCandyForm" onFinish={addRowHandler} name="basic">
-                    <Form.Item name="idNumber" rules={[{ required: true, message: '!בבקשה הכנס מספר ת.ז',},]}>
-                        <Input prefix={<CheckOutlined />} data-address={true} type="number" placeholder="מספר ת.ז"/>
+                    <Form.Item name="idNumber" rules={[{ required: true, message: '!בבקשה הכנס מספר ת.ז', 
+                                min: 9, message: 'תעודת הזהות חייבת להכיל 9 ספרות', },]}>
+                        <Input prefix={<LockOutlined className="site-form-item-icon" />} type="number" placeholder="מספר ת.ז"/>
                     </Form.Item>
                     <Form.Item name="employeeName" rules={[{ required: true, message: '!בבשקה הכנס שם עובד',},]}>
                         <Input prefix={<CheckOutlined className="site-form-item-icon" />} placeholder="שם עובד" />

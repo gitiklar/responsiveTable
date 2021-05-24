@@ -72,4 +72,4 @@ const newColumns = columns.columns.map((col, index) => ({
   );
 }
 
-export default ResponsiveTa
+export default ResponsiveTable;
