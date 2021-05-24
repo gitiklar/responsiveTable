@@ -24,7 +24,7 @@ const columnArray = [
   { title: <span className="dragHandler">שעות ידניות</span>,dataIndex: "manualHours",width: 100 },
   { title: <span className="dragHandler">שעות חריגות</span>,dataIndex: "exceptionalHours",width: 100 },
   { title: <span className="dragHandler">שם עובד</span>,dataIndex: "employeeName",width: 100 },
-  { title: <span className="dragHandler">מספר ת.ז</span>, dataIndex: "idNumber", render: (text) => <span>{text}</span>, width: 100 },
+  { title: <span className="dragHandler">מספר ת.ז</span>, dataIndex: "key", render: (text) => <span>{text}</span>, width: 100 },
 ]
 
 const ResponsiveTable = () => {
