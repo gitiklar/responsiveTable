@@ -24,8 +24,8 @@ const AddNewRow = ({ isVisible , setIsVisible }) => {
             >
 
                 <Form key={clearForm} dir="rtl" id="newCandyForm" onFinish={addRowHandler} name="basic">
-                    <Form.Item name="idNumber" rules={[{ required: true, message: '!בבקשה הכנס מספר ת.ז', 
-                                min: 9, message: 'תעודת הזהות חייבת להכיל 9 ספרות', },]}>
+                    <Form.Item name="key" rules={[{ required: true, message: '!בבקשה הכנס מספר ת.ז', 
+                                min: 9 , max: 9 , message: 'תעודת הזהות חייבת להכיל 9 ספרות', },]}>
                         <Input prefix={<LockOutlined className="site-form-item-icon" />} type="number" placeholder="מספר ת.ז"/>
                     </Form.Item>
                     <Form.Item name="employeeName" rules={[{ required: true, message: '!בבשקה הכנס שם עובד',},]}>
